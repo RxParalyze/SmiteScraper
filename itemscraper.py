@@ -84,7 +84,7 @@ for sourceItem in sourceItems:
                 if manaStacks:
                     amount = re.findall(r'\d+', manaStacks.group())
                     item['stacks']['stacks']['mana']= int(amount[0])
-                physicalPowerStacks = re.search("gives you stacks of \+\d*\.?\d+ Physical Power".lower(), item['passive'].lower())
+                physicalPowerStacks = re.search("stacks of \+\d*\.?\d+ Physical Power".lower(), item['passive'].lower())
                 if physicalPowerStacks:
                     amount = re.findall(r'\d*\.?\d+', physicalPowerStacks.group())
                     item['stacks']['stacks']['physicalPower'] = float(amount[0])
